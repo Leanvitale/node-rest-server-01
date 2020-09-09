@@ -34,7 +34,7 @@ let verificarAdminRole = (req, res, next) => {
 
     if ( usuario.role !== 'ADMIN_ROLE' ) {
 
-        res.json({
+        return res.json({
             ok: false,
             err: {
                 message: 'Permiso denegado!'
